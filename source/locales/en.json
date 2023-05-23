@@ -1,0 +1,28 @@
+{
+  "exceptions" : {
+	"data_validation_exception" : "One or more fields are required",
+	"page_not_found" : "Resource [1:w]:[0:w] not found",
+	"request_timeout" : "HTTP request timeout",
+	"unauthorized_access" : "Unauthorized access to [0:w]:[1:w]",
+	"denied_access" : "Access Denied to [1]",
+	"missing_fields" : "Required fields: [0]",
+	"data_server_connection_failed" : "Data server [0] connection failed",
+	"data_server_offline" : "Data server offline",
+	"data_server_disconnected" : "Data server [0] disconnected unexpectedly",
+	"data_exception" : "Data processing error. [inner]",
+	"report_data_error" : "Error loading report data"
+  },
+  "labels" : {
+  },
+  "debugs" : {
+  },
+  "api" : {
+	"actions" : {
+	  "users" : {
+		"labels" : {
+		  "user_list" : "List of users"
+		}
+	  }
+	}
+  }
+}

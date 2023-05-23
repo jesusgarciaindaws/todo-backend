@@ -1,0 +1,28 @@
+{
+  "exceptions" : {
+	"data_validation_exception" : "Uno o varios campos son requeridos en la solicitud",
+	"page_not_found" : "Recurso [1:w]:[0:w] no encontrado",
+	"request_timeout" : "Tiempo de espera excedido",
+	"unauthorized_access" : "Acceso no autorizado a [1:w] usando método [0:w]",
+	"denied_access" : "Accedo denegado a [1]",
+	"missing_fields" : "Campos requeridos: [0]",
+	"data_server_connection_failed" : "Error conectado al servidor de datos [0]",
+	"data_server_offline" : "Servidor de datos fuera de linea",
+	"data_server_disconnected" : "Servidor de datos [0] desconectado inesperadamente",
+	"data_exception" : "Error procesado datos. [inner]",
+	"report_data_error" : "Error cargando información de reporte"
+  },
+  "labels" : {
+  },
+  "debugs" : {
+  },
+  "api" : {
+	"actions" : {
+	  "users" : {
+		"labels" : {
+		  "user_list" : "Lista de usuarios"
+		}
+	  }
+	}
+  }
+}

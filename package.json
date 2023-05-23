@@ -1,0 +1,24 @@
+{
+  "name" : "todo-backend",
+  "version" : "0.0.1",
+  "description" : "Backend API to manage to-do list for specific users",
+  "main" : "index.js",
+  "repository" : {
+	"type" : "git",
+	"url" : "git@github.com:0aps/todo-backend.git"
+  },
+  "scripts" : {
+	"start" : "node entry.js"
+  },
+  "keywords" : [],
+  "author" : "",
+  "license" : "ISC",
+  "dependencies" : {
+	"anxeb-mongoose" : "^1.0.6",
+	"anxeb-node" : "^2.2.0",
+	"md5" : "^2.2.1",
+	"node4mailer" : "^4.0.3",
+	"puppeteer" : "^19.7.2",
+	"sharp" : "^0.31.3"
+  }
+}

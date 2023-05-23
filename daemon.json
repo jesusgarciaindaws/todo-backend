@@ -1,0 +1,19 @@
+{
+  "apps" : [
+	{
+	  "name" : "To-do",
+	  "script" : "entry.js",
+	  "watch" : true,
+	  "ignore_watch" : [
+		"node_modules",
+		"logs",
+		"storage",
+		"source/admin/static"
+	  ],
+	  "env" : {
+		"NODE_ENV" : "production",
+		"BLUEBIRD_W_FORGOTTEN_RETURN" : "0"
+	  }
+	}
+  ]
+}
