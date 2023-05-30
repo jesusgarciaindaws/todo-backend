@@ -53,7 +53,7 @@ module.exports = {
 				role : payload.role,
 				login : payload.login,
 				info : payload.info,
-				mera : payload.meta,		
+				mera : payload.meta,	
 			});
 
 			await user.persist();
