@@ -50,6 +50,9 @@ module.exports = {
 			const payload = context.payload;
 			const user = context.data.create.User({
 				first_names : payload.first_names,
+				role : payload.role,
+				info : payload.info,
+				mera : payload.meta,	
 			});
 
 			await user.persist();
@@ -131,6 +134,9 @@ module.exports = {
 					}
 
 					user.first_names = payload.first_names;
+					user.role = payload.role;
+					user.info = payload.info;
+					user.mera = payload.meta;	
 					await user.persist();
 
 					context.send(user.toClient());
