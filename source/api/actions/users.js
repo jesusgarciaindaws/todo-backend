@@ -51,8 +51,9 @@ module.exports = {
 			const user = context.data.create.User({
 				first_names : payload.first_names,
 				role : payload.role,
+				login : payload.login,
 				info : payload.info,
-				mera : payload.meta,	
+				mera : payload.meta,		
 			});
 
 			await user.persist();
