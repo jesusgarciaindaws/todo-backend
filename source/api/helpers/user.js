@@ -39,12 +39,6 @@ module.exports = function (context, user) {
 				}),
 				flags: {},
 			}
-
-			// if (_user.isClient() && _user.hasContactId()){
-			// 	const units = await self.getUnits();
-			// 	$user.info
-			// }
-
 		}
 	}
 };

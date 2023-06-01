@@ -49,7 +49,7 @@ module.exports = {
 		post : async function (context) {
 			const payload = context.payload;
 			const user = context.data.create.User({
-				first_names : payload.first_names,
+				name : payload.name,
 				role : payload.role,
 				login : payload.login,
 				info : payload.info,
@@ -134,10 +134,10 @@ module.exports = {
 						context.log.exception.record_not_found.args('Usuario', context.params.userId).throw();
 					}
 
-					user.first_names = payload.first_names;
+					user.name = payload.first_names;
 					user.role = payload.role;
 					user.info = payload.info;
-					user.mera = payload.meta;	
+					user.meta = payload.meta;	
 					await user.persist();
 
 					context.send(user.toClient());

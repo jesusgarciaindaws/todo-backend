@@ -13,7 +13,12 @@ module.exports = {
 				first_names: this.first_names,
 				last_names: this.last_names,
 				role: this.role,
-				login: { email: this.login.email, provider: this.login.provider, state: this.login.state, date: this.login.date },
+				login: {
+					email: this.login.email,
+					provider: this.login.provider,
+					state: this.login.state,
+					date: this.login.date
+				},
 				info: this.info,
 				meta: this.meta
 			}

@@ -28,7 +28,7 @@ module.exports = {
 
                     }   else    {
                         user = context.data.create.User({
-                            first_names : prospect.first_names,
+                            name : prospect.name,
                             role        : 'client',
                             login       : {
                                 provider: 'email',
