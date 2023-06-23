@@ -162,10 +162,8 @@ module.exports = {
             context.send(task.toClient());
           } else if (task.owner == context.profile.identity) {
             (task.name = payload.name),
-              (task.description = payload.description),
-              (task.done = payload.done),
-              (task.date = anxeb.utils.date.now().unix()),
-              await task.persist();
+            (task.description = payload.description),
+            await task.persist();
             context.send(task.toClient());
           } else {
             context.send("No puedes editar");
