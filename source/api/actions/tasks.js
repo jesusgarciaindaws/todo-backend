@@ -54,14 +54,28 @@ module.exports = {
      *              $ref: '#/components/schemas/UsTasker'
      */
     post: async function (context) {
-      const payload = context.payload;
-      const task = context.data.create.Task({
+      console.log(context.payload);
+      const payload = context.payload.task;
+
+      let task = await context.data.retrieve.Task(context.payload.task.id);
+      if (task) {
+        console.log("nuevo");
+      } else {
+        console.log("viejo");
+      }
+
+      const newTask = context.data.create.Task({
         name: payload.name,
         description: payload.description,
       });
-      console.log(task);
-      await task.persist();
-      context.send(task);
+
+      console.log('---------------------------------------------');
+      console.log(newTask);
+      console.log(newTask.toClient());
+      console.log('-----------------------------------------------');
+
+      await newTask.persist();
+      context.send(newTask.toClient());
     },
   },
   childs: {
@@ -138,7 +152,7 @@ module.exports = {
               .args("Task", context.params.taskId)
               .throw();
           }
-          if (context.profile.user.role == "admin") {
+          if (true) {
             (task.name = payload.name),
               (task.description = payload.description),
               (task.done = payload.done),
