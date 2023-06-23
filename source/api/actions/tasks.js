@@ -147,17 +147,18 @@ module.exports = {
         put: async function (context) {
           const task = await context.data.retrieve.Task(context.params.taskId);
           const payload = context.payload;
+          console.log(task);
+          console.log(payload);
+
           if (!task) {
             context.log.exception.record_not_found
               .args("Task", context.params.taskId)
               .throw();
           }
           if (true) {
-            (task.name = payload.name),
-              (task.description = payload.description),
-              (task.done = payload.done),
-              (task.date = anxeb.utils.date.now().unix()),
-              await task.persist();
+            (task.name = payload.task.name),
+            (task.description = payload.task.description),
+            await task.persist();
             context.send(task.toClient());
           } else if (task.owner == context.profile.identity) {
             (task.name = payload.name),
